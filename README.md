@@ -6,6 +6,8 @@ This is a static website built with HTML, CSS, and JavaScript. GitHub Pages publ
 
 The profile introduction sits above About Me, with an avatar beside the details on desktop and a stacked layout on mobile. Research interests: Efficient LLM Inference / Multimodal Long-Video Understanding / AutoML.
 
+Main body text is 18 px on desktop and 17 px on mobile. Light mode uses black body text and gray dates while retaining blue links; dark mode uses light text. The existing serif font and bold emphasis are preserved.
+
 To update the page, edit `index.html`, `profile.css`, `main.js`, or the files in `assets/`, then push to `codex/homepage`.
 
 The CV is provided in Chinese. The avatar and research figures are supplied by the site owner.

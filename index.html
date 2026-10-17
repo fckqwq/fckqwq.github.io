@@ -14,7 +14,7 @@
     document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
       ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="profile.css?v=20261018-top-profile">
+  <link rel="stylesheet" href="profile.css?v=20261018-readable-text">
   <script src="main.js?v=20261018-theme" defer></script>
 </head>
 <body>
@@ -110,7 +110,7 @@
           </div>
           <div class="work-content">
             <h3>LLM Inference Optimization and Low-bit Quantization</h3>
-            <p class="work-meta">MAC Lab, Xiamen University <span>·</span> Jun 2026 – Present</p>
+            <p class="work-meta">MAC Lab, Xiamen University <span>·</span> <span class="date">Jun 2026 – Present</span></p>
             <p>Built a unified, reproducible evaluation pipeline to study how rotation structures interact with quantization backends, comparing <code>block_diag</code> and <code>kronecker</code> across RTN, GPTQ, and SpQR.</p>
             <p class="result-line">WikiText-2 PPL <strong>10.8440 → 10.5379</strong></p>
             <p class="result-context">Qwen3-8B · W4A4 · nsamples=128 · block_diag + GPTQ</p>
@@ -146,7 +146,7 @@
           <div class="work-content">
             <h3>Video-RAG Ultra</h3>
             <p class="work-subtitle">Multimodal Retrieval-Augmented Long-Video Understanding</p>
-            <p class="work-meta">Independent project <span>·</span> Dec 2025 – Feb 2026</p>
+            <p class="work-meta">Independent project <span>·</span> <span class="date">Dec 2025 – Feb 2026</span></p>
             <p>Designed an <strong>evidence retrieval + temporal organization + multimodal reasoning</strong> pipeline to address the high GPU memory cost of directly processing long videos and information loss over long contexts, combining visual and audio evidence for video question answering.</p>
             <p class="result-line">Video-MME <strong>60.89%</strong> <span>Full evaluation without subtitles</span></p>
             <div class="tags" aria-label="Project technologies"><span>PyTorch</span><span>OpenCLIP</span><span>FAISS</span><span>Qwen2.5-VL</span></div>
@@ -195,7 +195,7 @@
         <div class="contact-actions"><a href="mailto:18789200286@163.com"><svg class="icon"><use href="#icon-mail"/></svg>18789200286@163.com</a><a href="https://github.com/fckqwq" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"/></svg>fckqwq<svg class="icon external-icon"><use href="#icon-arrow"/></svg></a><a href="assets/feng-chengkuan-cv.pdf" download="Chengkuan-Feng-CV-Chinese.pdf"><svg class="icon"><use href="#icon-file"/></svg>Download CV (Chinese)</a></div>
       </section>
 
-      <footer class="site-footer"><span>© 2026 Chengkuan Feng</span><span>Last updated · October 2026</span></footer>
+      <footer class="site-footer"><span>© 2026 Chengkuan Feng</span><span>Last updated · <time class="date" datetime="2026-10">October 2026</time></span></footer>
     </main>
   </div>
 </body>
