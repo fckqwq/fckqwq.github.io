@@ -99,14 +99,10 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
 .evaluation-table th { font-weight: 400; color: #666; }
 .evaluation-table td { color: var(--blue); }
 .awards-list { list-style: none; padding: 0; margin: 0; }
-.awards-list li { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; line-height: 1.6; }
+.awards-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; line-height: 1.6; }
 .awards-list li:last-child { border-bottom: 0; }
 .awards-list time { color: #777; font-size: 13px; font-variant-numeric: tabular-nums; }
-.award-detail { display: block; color: #888; font-size: 12px; margin-top: 2px; }
-.medal { padding: 1px 7px; border: 1px solid; border-radius: 3px; font-family: var(--font); font-size: 11px; white-space: nowrap; }
-.silver { color: #5d6b80; background: #f6f8fb; border-color: #dce1e8; }
-.bronze { color: #99603b; background: #fbf8f5; border-color: #ebded2; }
-.gold { color: #91701c; background: #fdfbf3; border-color: #ebe1bd; }
+.award-result { white-space: nowrap; }
 .skills-list { margin: 0; font-size: 14px; }
 .skills-list > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 16px; margin-bottom: 12px; }
 .skills-list dt { font-weight: 700; }
@@ -182,10 +178,8 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .tags span { padding: 2px 6px; font-size: 9px; }
   .work-details { margin-top: 15px; }
   .detail-content { padding: 11px; font-size: 12px; }
-  .awards-list li { grid-template-columns: 52px minmax(0, 1fr) auto; gap: 8px; font-size: 12px; padding: 11px 0; }
+  .awards-list li { font-size: 12px; padding: 11px 0; }
   .awards-list time { font-size: 11px; }
-  .award-detail { font-size: 10px; }
-  .medal { max-width: 79px; white-space: normal; text-align: center; font-size: 9px; padding: 1px 5px; }
   .skills-list { font-size: 13px; }
   .skills-list > div { display: block; margin-bottom: 13px; }
   .skills-list dt { margin-bottom: 2px; }
