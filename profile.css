@@ -56,8 +56,8 @@ svg { flex-shrink: 0; }
 .skip-link { position: fixed; z-index: 20; top: -70px; left: 16px; padding: 8px 14px; background: var(--surface); border: 1px solid var(--blue); }
 .skip-link:focus { top: 9px; }
 .site-header { position: sticky; top: 0; z-index: 10; height: 57px; border-bottom: 1px solid var(--line); background: var(--header); }
-.top-nav { max-width: 1352px; height: 56px; margin: 0 auto; padding: 0 36px; display: flex; align-items: center; gap: 55px; font-family: var(--font); font-size: 16px; font-weight: 400; white-space: nowrap; }
-.nav-brand { color: var(--ink); font-size: 18px; font-weight: 700; }
+/* Match the main column's left edge: page padding + sidebar width + column gap. */
+.top-nav { max-width: 1352px; height: 56px; margin: 0 auto; padding: 0 36px 0 calc(36px + 245px + 44px); display: flex; align-items: center; gap: 55px; font-family: var(--font); font-size: 16px; font-weight: 400; white-space: nowrap; }
 .nav-links { display: flex; min-width: 0; height: 100%; align-items: stretch; gap: 38px; overflow-x: auto; scrollbar-width: none; }
 .nav-links::-webkit-scrollbar { display: none; }
 .nav-links a { flex-shrink: 0; }
@@ -157,7 +157,7 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
 .site-footer { display: flex; justify-content: space-between; gap: 14px; margin-top: 45px; border-top: 1px solid var(--soft-line); padding: 18px 0 35px; color: var(--subtle); font-size: 11px; }
 @media (min-width: 1600px) { .page-shell { padding-top: 35px; } }
 @media (max-width: 1050px) {
-  .top-nav { gap: 34px; padding: 0 28px; }
+  .top-nav { gap: 34px; padding: 0 28px 0 calc(28px + 220px + 32px); }
   .nav-links { gap: 25px; }
   .page-shell { grid-template-columns: 220px minmax(0, 1fr); padding-left: 28px; padding-right: 28px; gap: 32px; }
   .profile h1, .small-label { font-size: 17px; }
@@ -171,15 +171,13 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .profile h1 span { display: block; margin-left: 0; margin-top: 3px; }
   .work-gallery { width: 160px; flex-basis: 160px; }
   .profile-links { font-size: 11px; }
-  .top-nav { gap: 24px; padding: 0 24px; }
+  .top-nav { gap: 24px; padding: 0 24px 0 calc(24px + 190px + 25px); }
   .nav-links { gap: 19px; font-size: 13px; }
-  .nav-brand { font-size: 14px; }
 }
 @media (max-width: 720px) {
   :root { scroll-padding-top: 75px; }
   .site-header { height: 54px; }
   .top-nav { height: 53px; padding: 0 12px 0 20px; gap: 16px; }
-  .nav-brand { font-size: 14px; flex-shrink: 0; }
   .nav-links { gap: 24px; font-size: 13px; }
   .theme-toggle { flex-basis: 36px; width: 36px; height: 36px; }
   .page-shell { display: block; padding: 25px 20px 0; }

@@ -14,7 +14,7 @@
     document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
       ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="profile.css?v=20261018-label-name">
+  <link rel="stylesheet" href="profile.css?v=20261018-nav-align">
   <script src="main.js?v=20261018-theme" defer></script>
 </head>
 <body>
@@ -32,7 +32,6 @@
 
   <header class="site-header">
     <nav class="top-nav" aria-label="Main navigation">
-      <a class="nav-brand" href="#about">Chengkuan Feng</a>
       <div class="nav-links">
         <a href="#about" aria-current="location">About</a>
         <a href="#education">Education</a>
