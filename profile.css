@@ -78,14 +78,19 @@ svg { flex-shrink: 0; }
 .profile-role { margin: 0 0 19px; font-size: 13px; line-height: 1.65; }
 .profile-role span { color: var(--secondary); font-size: 12px; }
 .profile-links { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; font-size: 12px; line-height: 1.5; }
-.profile-icon { display: flex; align-items: center; justify-content: center; width: 100%; height: 36px; padding: 0; border: 0; border-radius: 5px; color: var(--secondary); background: transparent; cursor: pointer; }
-.profile-icon:hover, .profile-icon:focus-visible { color: var(--blue); background: var(--panel); text-decoration: none; }
-.profile-links .icon { width: 21px; height: 21px; }
-.profile-tooltip { position: absolute; z-index: 12; top: calc(100% + 6px); left: 0; width: max-content; max-width: 100%; padding: 7px 10px; border-radius: 5px; color: var(--surface); background: var(--heading); text-align: left; overflow-wrap: anywhere; visibility: hidden; pointer-events: none; }
-.profile-tooltip::before { content: ""; position: absolute; left: 0; right: 0; top: -6px; height: 6px; }
-.profile-links li:hover .profile-tooltip, .profile-links li:focus-within .profile-tooltip { visibility: visible; pointer-events: auto; }
-.profile-links:not(:has(.profile-icon:focus-visible)):has(li:hover) li:not(:hover) .profile-tooltip { visibility: hidden; pointer-events: none; }
-.profile-links:has(.profile-icon:focus-visible) li:not(:focus-within) .profile-tooltip { visibility: hidden; pointer-events: none; }
+.profile-links > li { position: relative; min-width: 0; }
+.profile-icon { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 38px; aspect-ratio: 1; margin: 0 auto; padding: 0; border: 1px solid var(--soft-line); border-radius: 50%; color: var(--secondary); background: var(--panel-soft); cursor: pointer; transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease; }
+.profile-icon:hover, .profile-icon:focus-visible { color: var(--blue); background: var(--tag-bg); border-color: var(--tag-border); box-shadow: 0 2px 8px rgb(0 0 0 / .05); text-decoration: none; }
+.profile-icon:focus-visible { border-radius: 50%; }
+.profile-links .icon { width: 19px; height: 19px; stroke-width: 1.7; }
+.profile-tooltip { position: absolute; z-index: 12; top: calc(100% + 10px); left: 50%; width: max-content; max-width: min(220px, calc(100vw - 32px)); padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); background: var(--surface); box-shadow: 0 8px 24px rgb(0 0 0 / .09), 0 2px 6px rgb(0 0 0 / .04); text-align: center; overflow-wrap: anywhere; opacity: 0; visibility: hidden; transform: translate(var(--tip-shift, -50%), 4px); pointer-events: none; transition: opacity 160ms ease, transform 160ms ease, visibility 160ms; }
+.profile-tooltip::before { content: ""; position: absolute; left: 0; right: 0; top: -11px; height: 11px; }
+.profile-tooltip::after { content: ""; position: absolute; top: -5px; left: var(--tip-arrow, 50%); width: 8px; height: 8px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); background: var(--surface); transform: translateX(-50%) rotate(45deg); }
+.profile-links li:first-child .profile-tooltip { left: 0; --tip-shift: 0%; --tip-arrow: 22px; }
+.profile-links li:last-child .profile-tooltip { left: auto; right: 0; --tip-shift: 0%; --tip-arrow: calc(100% - 22px); }
+.profile-links li:hover .profile-tooltip, .profile-links li:focus-within .profile-tooltip { visibility: visible; opacity: 1; transform: translate(var(--tip-shift, -50%), 0); pointer-events: auto; }
+.profile-links:not(:has(.profile-icon:focus-visible)):has(li:hover) li:not(:hover) .profile-tooltip,
+.profile-links:has(.profile-icon:focus-visible) li:not(:focus-within) .profile-tooltip { visibility: hidden; opacity: 0; transform: translate(var(--tip-shift, -50%), 4px); pointer-events: none; }
 .profile-interests { margin-top: 26px; padding-top: 19px; border-top: 1px solid var(--soft-line); }
 .small-label { font-family: var(--font); font-size: 18px; line-height: 1.4; font-weight: 750; letter-spacing: -.4px; color: var(--heading); }
 .profile-interests p { margin-top: 9px; font-family: var(--font); font-size: 13px; line-height: 1.9; color: var(--secondary); }
@@ -177,6 +182,9 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .top-nav { gap: 24px; padding: 0 24px 0 calc(24px + 190px + 25px); }
   .nav-links { gap: 19px; font-size: 13px; }
 }
+@media (max-width: 800px) {
+  .profile-links li:nth-child(2) .profile-tooltip { left: 0; --tip-shift: 0%; --tip-arrow: 18px; }
+}
 @media (max-width: 720px) {
   :root { scroll-padding-top: 75px; }
   .site-header { height: 54px; }
@@ -227,7 +235,10 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .contact-actions { font-size: 12px; gap: 13px 22px; }
   .site-footer { margin-top: 32px; padding-bottom: 25px; flex-wrap: wrap; gap: 4px; font-size: 10px; }
 }
-@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  .profile-icon, .profile-tooltip { transition: none; }
+}
 @media print {
   .site-header, .skip-link { display: none; }
   .page-shell { display: block; padding: 0; }
@@ -235,9 +246,9 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .profile .portrait, .profile-interests { display: none; }
   .profile-links { display: flex; gap: 20px; flex-wrap: wrap; }
   .profile-links li { display: flex; align-items: center; gap: 6px; }
-  .profile-icon { width: 24px; height: 24px; }
-  .profile-links .profile-tooltip { position: static; visibility: visible !important; padding: 0; max-width: none; color: inherit; background: transparent; }
-  .profile-tooltip::before { display: none; }
+  .profile-icon { width: 24px; height: 24px; border: 0; background: transparent; }
+  .profile-links .profile-tooltip { position: static; visibility: visible !important; opacity: 1 !important; transform: none !important; transition: none; padding: 0; max-width: none; border: 0; box-shadow: none; color: inherit; background: transparent; }
+  .profile-tooltip::before, .profile-tooltip::after { display: none; }
   .main-content { max-width: none; }
   h2, h3 { break-after: avoid; }
   article, .education-entry, .awards-list li { break-inside: avoid; }
