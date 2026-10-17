@@ -8,4 +8,6 @@ To update the page, edit `index.html`, `profile.css`, `main.js`, or the files in
 
 The CV is provided in Chinese. The avatar and research figures are supplied by the site owner.
 
+Profile platform icons and solid utility glyphs include assets from Simple Icons and Font Awesome Free. See [icon credits and licenses](assets/licenses/README.md).
+
 The navigation's sun/moon button switches between light and dark themes. The first visit follows the system preference; manual choices are saved locally in the browser.
