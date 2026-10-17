@@ -14,7 +14,7 @@
     document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
       ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="profile.css?v=20261018-nav-align">
+  <link rel="stylesheet" href="profile.css?v=20261018-profile-icons-2">
   <script src="main.js?v=20261018-theme" defer></script>
 </head>
 <body>
@@ -54,12 +54,12 @@
         <h1>Chengkuan Feng</h1>
         <p class="profile-role">Computer Science Undergraduate<br><span>China Three Gorges University</span></p>
       </div>
-      <ul class="profile-links">
-        <li><span><svg class="icon"><use href="#icon-pin"/></svg>China</span></li>
-        <li><span><svg class="icon"><use href="#icon-school"/></svg>China Three Gorges University</span></li>
-        <li><a href="mailto:18789200286@163.com"><svg class="icon"><use href="#icon-mail"/></svg><span>18789200286@163.com</span></a></li>
-        <li><a href="https://github.com/fckqwq" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-github"/></svg>GitHub <span class="link-handle">/ fckqwq</span></a></li>
-        <li><a href="assets/feng-chengkuan-cv.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-file"/></svg>CV (Chinese) <span class="link-handle">PDF ↗</span></a></li>
+      <ul class="profile-links" aria-label="Profile information and links">
+        <li><button class="profile-icon" type="button" aria-label="Location" aria-describedby="profile-location"><svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg></button><span class="profile-tooltip" id="profile-location" role="tooltip">China</span></li>
+        <li><button class="profile-icon" type="button" aria-label="University" aria-describedby="profile-university"><svg class="icon" aria-hidden="true"><use href="#icon-school"/></svg></button><span class="profile-tooltip" id="profile-university" role="tooltip">China Three Gorges University</span></li>
+        <li><a class="profile-icon" href="mailto:18789200286@163.com" aria-label="Email" aria-describedby="profile-email"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a><span class="profile-tooltip" id="profile-email" role="tooltip">18789200286@163.com</span></li>
+        <li><a class="profile-icon" href="https://github.com/fckqwq" target="_blank" rel="noopener noreferrer" aria-label="GitHub" aria-describedby="profile-github"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a><span class="profile-tooltip" id="profile-github" role="tooltip">GitHub / fckqwq</span></li>
+        <li><a class="profile-icon" href="assets/feng-chengkuan-cv.pdf" target="_blank" rel="noopener" aria-label="CV (Chinese PDF)" aria-describedby="profile-cv"><svg class="icon" aria-hidden="true"><use href="#icon-file"/></svg></a><span class="profile-tooltip" id="profile-cv" role="tooltip">CV (Chinese) · PDF ↗</span></li>
       </ul>
       <div class="profile-interests">
         <span class="small-label">Research Interests</span>
