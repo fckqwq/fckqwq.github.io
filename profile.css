@@ -83,7 +83,7 @@ svg { flex-shrink: 0; }
 .profile-links .icon { width: 16px; height: 16px; color: var(--secondary); }
 .link-handle { color: var(--subtle); font-size: 11px; }
 .profile-interests { margin-top: 26px; padding-top: 19px; border-top: 1px solid var(--soft-line); }
-.small-label { font-family: Arial, "Microsoft YaHei", "SimHei", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--subtle); }
+.small-label { font-family: var(--font); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--heading); }
 .profile-interests p { margin-top: 9px; font-family: var(--font); font-size: 13px; line-height: 1.9; color: var(--secondary); }
 .main-content { min-width: 0; max-width: 900px; font-size: 16px; }
 section { scroll-margin-top: 16px; }
