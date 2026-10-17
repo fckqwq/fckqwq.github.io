@@ -4,11 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal homepage of Chengkuan Feng. Research interests include efficient LLM inference and multimodal long-video understanding, with a current focus on model compression through low-bit quantization.">
-  <meta name="theme-color" content="#002fa7">
+  <meta name="theme-color" content="#ffffff">
   <title>Chengkuan Feng</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="profile.css">
-  <script src="main.js" defer></script>
+  <script>
+    // Apply the saved preference before styles load to avoid a theme flash.
+    let savedTheme;
+    try { savedTheme = localStorage.getItem('theme'); } catch {}
+    document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
+      ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
+  <link rel="stylesheet" href="profile.css?v=20261018-theme">
+  <script src="main.js?v=20261018-theme" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -19,6 +26,8 @@
     <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7l-5-5Zm0 0v6h5M8 12h8m-8 4h8"/></symbol>
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -32,6 +41,10 @@
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>
+        <svg class="icon theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+        <svg class="icon theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+      </button>
     </nav>
   </header>
 
@@ -147,10 +160,10 @@
       <section id="awards" aria-labelledby="awards-title">
         <h2 id="awards-title">Honors &amp; Awards</h2>
         <ul class="awards-list">
-          <li><time datetime="2025-10">10.2025</time> · <strong>50th ICPC Asia Regional Contest</strong> · <span class="award-result"><span aria-hidden="true">🥈</span> Silver Medal (Xi’an)</span></li>
-          <li><time datetime="2025-11">11.2025</time> · <strong>50th ICPC Asia Regional Contest</strong> · <span class="award-result"><span aria-hidden="true">🥉</span> Bronze Medal (Wuhan)</span></li>
-          <li><time datetime="2025-05">05.2025</time> · <strong>ICPC National Invitational Contest</strong> · <span class="award-result"><span aria-hidden="true">🥈</span> Silver Medal (Xi’an)</span></li>
-          <li><time datetime="2026-06">06.2026</time> · <strong>17th Lanqiao Cup National Finals</strong> · <span class="award-result"><span aria-hidden="true">🏆</span> First Prize</span></li>
+          <li><time datetime="2025-10">10.2025</time> <strong>50th ICPC Asia Regional Contest</strong> <span class="award-result"><span aria-hidden="true">🥈</span> Silver Medal (Xi’an)</span></li>
+          <li><time datetime="2025-11">11.2025</time> <strong>50th ICPC Asia Regional Contest</strong> <span class="award-result"><span aria-hidden="true">🥉</span> Bronze Medal (Wuhan)</span></li>
+          <li><time datetime="2025-05">05.2025</time> <strong>ICPC National Invitational Contest</strong> <span class="award-result"><span aria-hidden="true">🥈</span> Silver Medal (Xi’an)</span></li>
+          <li><time datetime="2026-06">06.2026</time> <strong>17th Lanqiao Cup National Finals</strong> <span class="award-result"><span aria-hidden="true">🏆</span> First Prize</span></li>
         </ul>
       </section>
 

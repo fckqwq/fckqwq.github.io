@@ -1,3 +1,22 @@
+const themeToggle = document.querySelector('#theme-toggle');
+
+function updateThemeButton() {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  const label = `Switch to ${isDark ? 'light' : 'dark'} mode`;
+  themeToggle.setAttribute('aria-label', label);
+  themeToggle.setAttribute('title', label);
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#171b22' : '#ffffff');
+}
+
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem('theme', theme); } catch {}
+  updateThemeButton();
+});
+updateThemeButton();
+themeToggle.hidden = false;
+
 // Keep the navigation in sync with the section being read.
 const navigationLinks = [...document.querySelectorAll('.nav-links a')];
 const linkedSections = navigationLinks.map(link => document.querySelector(link.hash));
