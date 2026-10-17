@@ -71,7 +71,8 @@ svg { flex-shrink: 0; }
 :root[data-theme="dark"] .theme-sun { display: block; }
 .page-shell { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 44px; max-width: 1352px; margin: 0 auto; padding: 29px 36px 0; }
 .profile { position: sticky; top: 86px; align-self: start; font-family: var(--font); }
-.portrait { display: block; width: 167px; height: 167px; padding: 5px; margin-bottom: 17px; border: 1px solid var(--line); border-radius: 50%; object-fit: cover; object-position: center 25%; }
+.portrait { display: block; width: 167px; height: 167px; padding: 5px; margin: 0 auto 17px; border: 1px solid var(--line); border-radius: 50%; object-fit: cover; object-position: center 25%; }
+.profile-heading { text-align: center; }
 .profile h1 { margin: 0 0 10px; color: var(--heading); font-size: 18px; line-height: 1.4; font-weight: 750; letter-spacing: -.4px; }
 .profile h1 span { display: inline-block; margin-left: 5px; font-size: 16px; letter-spacing: 0; }
 .profile-role { margin: 0 0 19px; font-size: 13px; line-height: 1.65; }
@@ -183,14 +184,13 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
   .nav-links { gap: 24px; font-size: 13px; }
   .theme-toggle { flex-basis: 36px; width: 36px; height: 36px; }
   .page-shell { display: block; padding: 25px 20px 0; }
-  .profile { position: static; display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 0 15px; padding-bottom: 19px; margin-bottom: 25px; border-bottom: 1px solid var(--line); }
-  .portrait { width: 80px; height: 80px; padding: 3px; margin: 0; }
-  .profile-heading { align-self: center; min-width: 0; }
+  .profile { position: static; padding-bottom: 19px; margin-bottom: 25px; border-bottom: 1px solid var(--line); }
+  .portrait { width: 80px; height: 80px; padding: 3px; margin: 0 auto 12px; }
   .profile h1 { font-size: 17px; margin-bottom: 5px; letter-spacing: -.3px; }
   .profile h1 span { margin-left: 0; display: block; font-size: 14px; }
   .profile-role { font-size: 11px; line-height: 1.55; margin: 0; }
   .profile-role span { font-size: 11px; }
-  .profile-links { grid-column: 1 / -1; max-width: 280px; margin-top: 16px; }
+  .profile-links { width: 100%; max-width: 280px; margin: 16px auto 0; }
   .profile-interests { display: none; }
   .main-content { font-size: 15px; line-height: 1.65; }
   h2 { font-size: 22px; margin-top: 30px; margin-bottom: 13px; }
