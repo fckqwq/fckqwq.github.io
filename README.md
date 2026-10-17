@@ -4,6 +4,8 @@ Personal academic homepage: https://fckqwq.github.io/
 
 This is a static website built with HTML, CSS, and JavaScript. GitHub Pages publishes the root of the `codex/homepage` branch.
 
+The profile introduction sits above About Me, with an avatar beside the details on desktop and a stacked layout on mobile. Research interests: Efficient LLM Inference / Multimodal Long-Video Understanding / AutoML.
+
 To update the page, edit `index.html`, `profile.css`, `main.js`, or the files in `assets/`, then push to `codex/homepage`.
 
 The CV is provided in Chinese. The avatar and research figures are supplied by the site owner.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal homepage of Chengkuan Feng. Research interests include efficient LLM inference and multimodal long-video understanding, with a current focus on model compression through low-bit quantization.">
+  <meta name="description" content="Personal homepage of Chengkuan Feng. Research interests include efficient LLM inference, multimodal long-video understanding, and AutoML.">
   <meta name="theme-color" content="#ffffff">
   <title>Chengkuan Feng</title>
   <link rel="icon" href="assets/avatar.jpg?v=20261018-avatar" type="image/jpeg">
@@ -14,7 +14,7 @@
     document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
       ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="profile.css?v=20261018-social-brands">
+  <link rel="stylesheet" href="profile.css?v=20261018-top-profile">
   <script src="main.js?v=20261018-theme" defer></script>
 </head>
 <body>
@@ -57,33 +57,31 @@
   </header>
 
   <div class="page-shell">
-    <aside class="profile" aria-label="Profile">
-      <img class="portrait" src="assets/avatar.jpg" alt="Profile avatar for Chengkuan Feng" width="200" height="200" fetchpriority="high">
-      <div class="profile-heading">
-        <h1>Chengkuan Feng</h1>
-        <p class="profile-role">Computer Science Undergraduate<br><span>China Three Gorges University</span></p>
-      </div>
-      <ul class="profile-links" aria-label="Profile information and links">
-        <li><button class="profile-icon" type="button" aria-label="Location" aria-describedby="profile-location"><svg class="profile-brand brand-location" aria-hidden="true"><use href="#profile-symbol-pin"/></svg></button><span class="profile-tooltip" id="profile-location" role="tooltip">China</span></li>
-        <li><button class="profile-icon" type="button" aria-label="University" aria-describedby="profile-university"><svg class="profile-brand brand-university" aria-hidden="true"><use href="#profile-symbol-school"/></svg></button><span class="profile-tooltip" id="profile-university" role="tooltip">China Three Gorges University</span></li>
-        <li><a class="profile-icon" href="mailto:18789200286@163.com" aria-label="Email" aria-describedby="profile-email"><svg class="profile-brand brand-email" aria-hidden="true"><use href="#profile-symbol-mail"/></svg></a><span class="profile-tooltip" id="profile-email" role="tooltip">18789200286@163.com</span></li>
-        <li><a class="profile-icon" href="https://github.com/fckqwq" target="_blank" rel="noopener noreferrer" aria-label="GitHub" aria-describedby="profile-github"><svg class="profile-brand brand-github" aria-hidden="true"><use href="#profile-symbol-github"/></svg></a><span class="profile-tooltip" id="profile-github" role="tooltip">GitHub / fckqwq</span></li>
-        <li><a class="profile-icon" href="https://www.zhihu.com/people/yu-sheng-zhi-ai-ni-12" target="_blank" rel="noopener noreferrer" aria-label="Zhihu" aria-describedby="profile-zhihu"><svg class="profile-brand brand-zhihu" aria-hidden="true"><use href="#profile-symbol-zhihu"/></svg></a><span class="profile-tooltip" id="profile-zhihu" role="tooltip">Zhihu ↗</span></li>
-        <li><a class="profile-icon" href="https://www.xiaohongshu.com/user/profile/6485d714000000001c02befc" target="_blank" rel="noopener noreferrer" aria-label="RedNote (Xiaohongshu)" aria-describedby="profile-rednote"><svg class="profile-brand brand-rednote" aria-hidden="true"><use href="#profile-symbol-rednote"/></svg></a><span class="profile-tooltip" id="profile-rednote" role="tooltip">RedNote (Xiaohongshu) ↗</span></li>
-        <li><a class="profile-icon" href="assets/feng-chengkuan-cv.pdf" target="_blank" rel="noopener" aria-label="CV (Chinese PDF)" aria-describedby="profile-cv"><svg class="profile-brand brand-cv" aria-hidden="true"><use href="#profile-symbol-file"/></svg></a><span class="profile-tooltip" id="profile-cv" role="tooltip">CV (Chinese) · PDF ↗</span></li>
-      </ul>
-      <div class="profile-interests">
-        <span class="small-label">Research Interests</span>
-        <p>Efficient LLM Inference<br><em>Focus: Low-bit Quantization</em></p>
-        <p>Multimodal Long-Video Understanding</p>
-      </div>
-    </aside>
-
     <main id="main" class="main-content">
+      <header class="profile" aria-label="Profile">
+        <img class="portrait" src="assets/avatar.jpg" alt="Profile avatar for Chengkuan Feng" width="220" height="220" fetchpriority="high">
+        <div class="profile-details">
+          <div class="profile-heading">
+            <h1>Chengkuan Feng</h1>
+            <p class="profile-role">Computer Science Undergraduate<br><span>China Three Gorges University</span></p>
+          </div>
+          <ul class="profile-links" aria-label="Profile information and links">
+            <li><button class="profile-icon" type="button" aria-label="Location" aria-describedby="profile-location"><svg class="profile-brand brand-location" aria-hidden="true"><use href="#profile-symbol-pin"/></svg></button><span class="profile-tooltip" id="profile-location" role="tooltip">China</span></li>
+            <li><button class="profile-icon" type="button" aria-label="University" aria-describedby="profile-university"><svg class="profile-brand brand-university" aria-hidden="true"><use href="#profile-symbol-school"/></svg></button><span class="profile-tooltip" id="profile-university" role="tooltip">China Three Gorges University</span></li>
+            <li><a class="profile-icon" href="mailto:18789200286@163.com" aria-label="Email" aria-describedby="profile-email"><svg class="profile-brand brand-email" aria-hidden="true"><use href="#profile-symbol-mail"/></svg></a><span class="profile-tooltip" id="profile-email" role="tooltip">18789200286@163.com</span></li>
+            <li><a class="profile-icon" href="https://github.com/fckqwq" target="_blank" rel="noopener noreferrer" aria-label="GitHub" aria-describedby="profile-github"><svg class="profile-brand brand-github" aria-hidden="true"><use href="#profile-symbol-github"/></svg></a><span class="profile-tooltip" id="profile-github" role="tooltip">GitHub / fckqwq</span></li>
+            <li><a class="profile-icon" href="https://www.zhihu.com/people/yu-sheng-zhi-ai-ni-12" target="_blank" rel="noopener noreferrer" aria-label="Zhihu" aria-describedby="profile-zhihu"><svg class="profile-brand brand-zhihu" aria-hidden="true"><use href="#profile-symbol-zhihu"/></svg></a><span class="profile-tooltip" id="profile-zhihu" role="tooltip">Zhihu ↗</span></li>
+            <li><a class="profile-icon" href="https://www.xiaohongshu.com/user/profile/6485d714000000001c02befc" target="_blank" rel="noopener noreferrer" aria-label="RedNote (Xiaohongshu)" aria-describedby="profile-rednote"><svg class="profile-brand brand-rednote" aria-hidden="true"><use href="#profile-symbol-rednote"/></svg></a><span class="profile-tooltip" id="profile-rednote" role="tooltip">RedNote (Xiaohongshu) ↗</span></li>
+            <li><a class="profile-icon" href="assets/feng-chengkuan-cv.pdf" target="_blank" rel="noopener" aria-label="CV (Chinese PDF)" aria-describedby="profile-cv"><svg class="profile-brand brand-cv" aria-hidden="true"><use href="#profile-symbol-file"/></svg></a><span class="profile-tooltip" id="profile-cv" role="tooltip">CV (Chinese) · PDF ↗</span></li>
+          </ul>
+          <p class="profile-interests" aria-label="Research interests"><span>Efficient LLM Inference</span> <span class="interest-separator" aria-hidden="true">/</span> <span>Multimodal Long-Video Understanding</span> <span class="interest-separator" aria-hidden="true">/</span> <span>AutoML</span></p>
+        </div>
+      </header>
+
       <section id="about" aria-labelledby="about-title">
         <h2 id="about-title">About Me</h2>
         <p>Hello! I'm <strong>Chengkuan Feng</strong>, an undergraduate studying <strong>Computer Science and Technology at China Three Gorges University</strong>. I have been <strong>provisionally admitted via recommendation</strong> to the master's program in Artificial Intelligence at Xiamen University, with expected enrollment in September 2027. I am mentored by <a href="https://zhengxiawu.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiawu Zheng</a>.</p>
-        <p>My research interests lie in <strong>efficient LLM inference</strong> and <strong>multimodal long-video understanding</strong>. My current work focuses on <strong>model compression through low-bit quantization</strong>, particularly the interaction between rotation structures and quantization methods.</p>
+        <p>My research interests lie in <strong>efficient LLM inference</strong>, <strong>multimodal long-video understanding</strong>, and <strong>AutoML</strong>. My current work focuses on <strong>model compression through low-bit quantization</strong>, particularly the interaction between rotation structures and quantization methods.</p>
         <p>I also enjoy algorithms and competitive programming. I serve as captain of the ACM training team at China Three Gorges University and have earned silver and bronze medals in the ICPC Asia Regional Contests, as well as a First Prize in the Lanqiao Cup National Finals.</p>
         <p class="contact-note"><span aria-hidden="true">↗</span> I'm happy to discuss LLM quantization, inference optimization, and multimodal video understanding. <a href="mailto:18789200286@163.com">Get in touch by email</a>.</p>
       </section>
