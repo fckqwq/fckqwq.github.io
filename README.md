@@ -1,6 +1,6 @@
 # Chengkuan Feng
 
-Personal academic homepage: https://acmfck.github.io/
+Personal academic homepage: https://fckqwq.github.io/
 
 This is a static website built with HTML, CSS, and JavaScript. GitHub Pages publishes the root of the `codex/homepage` branch.
 
