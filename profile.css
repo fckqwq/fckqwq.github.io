@@ -161,7 +161,7 @@ code { font-size: .95em; overflow-wrap: anywhere; font-family: inherit; }
 .awards-list time { color: var(--subtle); font-size: 16px; font-variant-numeric: tabular-nums; }
 .award-result { white-space: nowrap; }
 .skills-list { margin: 0; font-size: inherit; }
-.skills-list > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 16px; margin-bottom: 12px; }
+.skills-list > div { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; margin-bottom: 12px; }
 .skills-list dt { font-weight: 700; }
 .skills-list dd { margin: 0; color: var(--ink); }
 #community p, #contact p { font-size: inherit; }
